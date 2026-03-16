@@ -223,10 +223,17 @@ function obtenerUsuarioXId(id){
      return usuarios.find(u => u.id === id);
 }
 
-function obtenerMayores(){
 
+function obtenerMayores(){
+return usuarios.filter(usuario => usuario.edad >= 18)
+}
+function crearUsuario(nombre, edad){
+
+const nuevoUsuario = {
+nombre: nombre,
+edad: edad
 }
 
-function crearUsuario(nombre, edad){
+usuarios.push(nuevoUsuario)
 
 }
